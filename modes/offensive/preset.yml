@@ -1,0 +1,3 @@
+name: Offensive
+description: Offensive security research agent — offensive-claude framework with kill-chain workflows, 39 pentest skills, engage-* commands, and scope/evidence/OPSEC discipline.
+order: 10

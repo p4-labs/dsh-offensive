@@ -1,0 +1,10 @@
+# dsh-offensive bundle patch — applied automatically by `dsh plugin add`.
+#
+# One row: the bundle entry plugin. It registers the `modes/` preset root and
+# mounts the Claude Code hook bridge from JS, because bundle-internal paths
+# must resolve from import.meta.url — `baseUrl` in a patch layer points at the
+# profile directory, not this package.
+
+- insert:
+    - id: dsh-offensive
+      name: 'dsh-offensive'

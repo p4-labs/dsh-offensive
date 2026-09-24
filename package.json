@@ -1,0 +1,36 @@
+{
+  "name": "dsh-offensive",
+  "version": "0.1.4",
+  "description": "offensive-claude ported to DeepSeek Harness: kill-chain skills, engage-* commands, scope/evidence/OPSEC discipline, SessionStart dispatcher hooks, and an Offensive agent preset \u2014 one self-contained bundle.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "modes",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "TERMS.md"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "offensive-security",
+    "redteam",
+    "pentest"
+  ]
+}
