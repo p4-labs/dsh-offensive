@@ -9,45 +9,48 @@ security framework — into dsh as a self-contained plugin.
 ## What you get
 
 - **Offensive agent preset** — appears in the preset picker; an attacker-perspective persona
-  with kill-chain engagement flow, scope/finding/OPSEC discipline
+  with kill-chain engagement flow, scope/finding/OPSEC discipline.
 - **39 skills** (recon-osint, web-pentest, exploit-development, active-directory-attack,
-  cloud-security, ...) loadable via the `skill` tool, plus 8 agent playbooks
+  cloud-security, ...) loadable via the `skill` tool, plus 8 agent playbooks.
 - **18 engagement commands** — `/engage-init`, `/engage-scope`, `/engage-recon`, ...,
-  `/engage-report` (Claude Code's `engage.*` commands, converted)
+  `/engage-report` (Claude Code's `engage.*` commands, converted).
 - **SessionStart / SubagentStart hooks** injecting the framework's skill-invocation
-  dispatcher (via `dsh-hooks-claude-code`)
-- The framework's Python tooling (`engine/`, `skills/*/scripts/`, templates, workflows)
+  dispatcher.
+- The framework's Python tooling (`engine/`, `skills/*/scripts/`, templates, workflows).
 
 ## Install
 
 ```bash
-dsh plugin --profile web add <dsh-offensive.tar.gz>
-# then restart dsh, create a new session, pick the "Offensive" preset
+dsh plugin --profile web add https://github.com/p4-labs/dsh-offensive/releases/latest/download/dsh-offensive.tar.gz
 ```
 
-Requires dsh web profile (tested on 0.1.5-rc.x).
+Restart dsh, create a new session, and pick the **Offensive** preset.
+
+## Demo
+
+<p align="center">
+  <img src="assets/preset.png" alt="Offensive preset in dsh" width="80%">
+</p>
+
+After selecting the preset, all framework skills are available through the skill catalog:
+
+<p align="center">
+  <img src="assets/skills.png" alt="Skill catalog" width="80%">
+</p>
 
 ## Layout
 
 ```
 modes/offensive/            framework root (self-contained)
 ├── preset.yml              preset manifest
-├── agent.cordis.yml        preset composition (paths resolved via baseUrl)
+├── agent.cordis.yml        preset composition
 ├── home/AGENTS.md          workspace instructions (scoped to this preset)
 ├── hooks/                  SessionStart/SubagentStart dispatcher hooks
 ├── skills/                 39 skill bundles + 8 agents + 18 engage-* commands
 └── engine/ templates/ workflows/ presets/ TERMS.md
-lib/index.js                bundle entry: registers the preset root and mounts
-                            the hook bridge (paths from import.meta.url)
+lib/index.js                bundle entry: registers the preset root and mounts hooks
 ```
-
-## Upstream sync
-
-Content is vendored from the upstream repo with small dsh-compatibility patches
-(hook JSON emission shape, frontmatter fence fixes, `engage.*` → `engage-*`
-conversion). To update: `./scripts/sync-upstream.sh` — see [UPDATE.md](UPDATE.md).
 
 ## Credits
 
 All framework content © [hypnguyen1209/offensive-claude](https://github.com/hypnguyen1209/offensive-claude) (MIT).
-This repository is only the dsh packaging layer.

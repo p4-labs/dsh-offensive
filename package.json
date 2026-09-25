@@ -1,6 +1,6 @@
 {
   "name": "dsh-offensive",
-  "version": "0.1.4",
+  "version": "0.1.0",
   "description": "offensive-claude ported to DeepSeek Harness: kill-chain skills, engage-* commands, scope/evidence/OPSEC discipline, SessionStart dispatcher hooks, and an Offensive agent preset \u2014 one self-contained bundle.",
   "type": "module",
   "main": "./lib/index.js",
