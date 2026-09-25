@@ -26,6 +26,8 @@ dsh plugin --profile web add https://github.com/p4-labs/dsh-offensive/releases/l
 
 Restart dsh, create a new session, and pick the **Offensive** preset.
 
+The URL above always points to the latest release. To pin a specific version, visit the [Releases](https://github.com/p4-labs/dsh-offensive/releases) page.
+
 ## Demo
 
 <p align="center">
