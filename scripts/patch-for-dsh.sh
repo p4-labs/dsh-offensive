@@ -32,3 +32,7 @@ find "$MODE" -type f \( -name "*.md" -o -name "*.py" \) \
   -exec sed -i '' 's|~/.config/Claude/claude_desktop_config.json|~/.dsh/mcp-config.json|g' {} +
 
 echo ">> done. Review: git -C $ROOT diff --stat"
+
+# Patch proxy MCP integration doc
+find "$MODE/skills/web-pentest/references" -type f -name "*.md" \
+  -exec sed -i '' 's/Claude Code connects to/dsh connects to/g' {} +
