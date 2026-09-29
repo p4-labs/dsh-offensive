@@ -48,7 +48,7 @@ Show pattern counts by vulnerability class.
 
 ## Notes
 
-- Storage: `~/.claude/engagement-memory/patterns.jsonl` (override `$ENGAGEMENT_DB`; use a per-client DB
+- Storage: `~/.dsh/engagement-memory/patterns.jsonl` (override `$ENGAGEMENT_DB`; use a per-client DB
   if ROE requires client isolation).
 - Recall is generic-by-class/stack; review before reusing across clients.
 - Records hold technique + CWE/CVSS + an evidence *reference*, never raw loot.

@@ -19,7 +19,7 @@ Output: JSONL findings on stdout (or --out), plus a human summary on stderr.
 
 Usage:
   python3 mcp_tool_audit.py --manifest tools.json --src ./server/ --out out/mcp.jsonl
-  python3 mcp_tool_audit.py --config ~/.config/Claude/claude_desktop_config.json
+  python3 mcp_tool_audit.py --config ~/.dsh/mcp-config.json
   # capture a baseline, then re-run later with --baseline to catch mutations:
   python3 mcp_tool_audit.py --manifest tools.json --emit-baseline base.json
   python3 mcp_tool_audit.py --manifest tools.json --baseline base.json

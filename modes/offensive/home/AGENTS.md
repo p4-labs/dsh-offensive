@@ -254,7 +254,7 @@ prior, written authorization whose boundary is declared in `scope.json` (see sco
 
 ## Instruction Priority
 
-1. **User's explicit instructions** (CLAUDE.md, direct requests) — highest.
+1. **User's explicit instructions** (AGENTS.md, direct requests) — highest.
 2. **These skills** — override default behavior where they conflict.
 3. **Default behavior** — lowest.
 
@@ -316,7 +316,7 @@ digraph flow {
 
 These bars hold on every finding, standalone or in an engagement — they do **not** depend on you
 having invoked `finding-discipline` first (invoke it for the full method). When installed as a
-plugin, the repo `CLAUDE.md` is not in your context; this section carries the contract regardless.
+plugin, the repo `AGENTS.md` is not in your context; this section carries the contract regardless.
 
 - **Confidence tier on every finding:** `[CONFIRMED]` (impact demonstrated + evidence-grounded),
   `[POSSIBLE]` (reachable, class bar not yet met), or `[INFO]` (no impact at current severity).

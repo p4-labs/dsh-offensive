@@ -31,7 +31,7 @@ scripts:
 
 ## Model
 
-Append-only JSONL store (`~/.claude/engagement-memory/patterns.jsonl`, override `$ENGAGEMENT_DB`).
+Append-only JSONL store (`~/.dsh/engagement-memory/patterns.jsonl`, override `$ENGAGEMENT_DB`).
 Three record types in their own files so they never mix: **patterns** (`patterns.jsonl`),
 **target profiles** (`profiles.jsonl`), **audit log** (`audit.jsonl`, disposable). A pattern is keyed
 by `(target, vuln_class, technique)`, ranked by **severity / CVSS / confidence** (real impact, never

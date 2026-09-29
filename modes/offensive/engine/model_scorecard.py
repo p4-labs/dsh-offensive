@@ -38,7 +38,7 @@ Z_95 = 1.959963984540054     # z for a 95% one-sided/two-sided bound
 
 def db_path() -> str:
     return os.environ.get("MODEL_SCORECARD_DB") or os.path.join(
-        os.path.expanduser("~"), ".claude", "engagement-memory", "scorecard.sqlite")
+        os.path.expanduser("~"), ".dsh", "engagement-memory", "scorecard.sqlite")
 
 
 def _connect(path: Optional[str] = None) -> sqlite3.Connection:

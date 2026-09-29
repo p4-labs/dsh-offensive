@@ -8,7 +8,7 @@ anti-context-bloat discipline.
 
 Storage: append-only JSONL (crash-safe O(1) writes). Duplicate keys (same target+class+
 technique) are merged on read and on compaction - NEVER blind-discarded (compaction keeps the
-highest-impact record and bumps its count). Default DB: ~/.claude/engagement-memory/patterns.jsonl
+highest-impact record and bumps its count). Default DB: ~/.dsh/engagement-memory/patterns.jsonl
 (override with --db or $ENGAGEMENT_DB).
 
 CLI:
@@ -91,14 +91,14 @@ def bm25_score(q_terms: list, dt: list, idf: dict, avgdl: float, k1: float = 1.2
 
 def default_db() -> str:
     return os.environ.get("ENGAGEMENT_DB") or os.path.join(
-        os.path.expanduser("~"), ".claude", "engagement-memory", "patterns.jsonl")
+        os.path.expanduser("~"), ".dsh", "engagement-memory", "patterns.jsonl")
 
 
 def global_db() -> str:
     """Cross-client store of SANITIZED techniques (no target/evidence). Per-client isolation is the
     default; the global store is opt-in via `promote --global` / `record --global` / `match --include-global`."""
     return os.environ.get("ENGAGEMENT_GLOBAL_DB") or os.path.join(
-        os.path.expanduser("~"), ".claude", "engagement-memory", "global.jsonl")
+        os.path.expanduser("~"), ".dsh", "engagement-memory", "global.jsonl")
 
 
 def _sanitize_for_global(rec: dict) -> dict:

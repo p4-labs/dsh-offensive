@@ -278,7 +278,7 @@ depends_on: [recon/recon-plan.md]
 
 ### Automatic Skill Loading
 
-When entering a phase, Claude Code automatically:
+When entering a phase, dsh automatically:
 
 1. Reads phase `skills` array from workflow YAML
 2. Loads each skill's `SKILL.md` file from `skills/<skill-id>/SKILL.md`
