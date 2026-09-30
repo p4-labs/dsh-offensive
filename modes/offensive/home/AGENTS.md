@@ -1,10 +1,10 @@
 # Security Research & Offensive Operations Config (dsh-offensive bundle)
 
 > Ported from [offensive-claude](https://github.com/hypnguyen1209/offensive-claude).
-> The SessionStart context names the **framework root** (an absolute path) — resolve every
-> relative path below (`skills/`, `engine/`, `templates/`, `workflows/`, `presets/`, `TERMS.md`)
-> against that root. Loading any skill with the `skill` tool also reveals the root via its
-> resource base path.
+> **Framework root**: the directory containing `skills/`, `engine/`, `templates/`, `workflows/`,
+> `presets/`, `TERMS.md` — i.e. the parent of the `home/` directory this file lives in.
+> It is also revealed by any loaded skill's resource base path (`skills/<name>/...`).
+> Resolve every relative path below against that root.
 > Skills/agents live in the dsh skill catalog of this preset — load a skill with the `skill`
 > tool before acting on it; users can invoke one with `/<name>`.
 > Engagement commands use dash names: `/engage-init`, `/engage-scope`, ...

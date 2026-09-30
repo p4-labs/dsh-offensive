@@ -12,7 +12,7 @@ depends_on: [privesc-windows, edr-evasion]
 feeds_into: [red-team-ops]
 inputs: [target_os, edr_product]
 outputs: [keylogger_binary, captured_input]
----
+  ---
 
 # Keylogger Architecture
 

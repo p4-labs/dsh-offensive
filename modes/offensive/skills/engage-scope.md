@@ -5,7 +5,7 @@ metadata:
   source: offensive-claude/commands/engage.scope.md
 ---
 
-> Framework resources (workflows/, templates/, engine/, presets/) live at the **framework root** — named in the SessionStart context and derivable from any loaded skill's resource base path. Resolve relative paths in this command against it.
+> Framework resources (workflows/, templates/, engine/, presets/) live at the **framework root** — the directory containing `skills/`, `engine/`, ... — derivable from any loaded skill's resource base path. Resolve relative paths in this command against it.
 
 
 # /engage.scope

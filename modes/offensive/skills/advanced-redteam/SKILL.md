@@ -12,7 +12,7 @@ depends_on: [edr-evasion, exploit-development, red-team-ops]
 feeds_into: [threat-hunting]
 inputs: [c2_framework, redirector_config]
 outputs: [c2_infrastructure, opsec_report, exfil_channel]
----
+  ---
 
 # Advanced Red Team Operations
 
